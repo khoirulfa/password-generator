@@ -1,0 +1,30 @@
+@import '/node_modules/bootstrap/scss/bootstrap.scss';
+@import '/node_modules/font-awesome/scss/font-awesome.scss';
+@import '/node_modules/sweetalert2/dist/sweetalert2.css';
+body {
+	background: url('/img/bg.jpg') no-repeat center;
+	background-size: cover;
+	.container {
+		.card {
+			.btn,
+			.btn-primary,
+			#copy-btn,
+			.btn:hover,
+			.btn:focus,
+			#pass-result:focus,
+			#pass-length:focus {
+				box-shadow: none;
+			}
+
+			#pass-result {
+				cursor: default;
+			}
+
+			#pass-length {
+				border-radius: 0;
+				border: none;
+				border-bottom: .2rem solid;
+			}
+		}
+	}
+}

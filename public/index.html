@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="/css/min.css">
+   <link rel="icon" href="https://v5.getbootstrap.com/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+   <title>Make your password</title>
+</head>
+<body class="text-light">
+   <div class="container d-flex vh-100 justify-content-center align-items-center">
+      <div class="col-md-4">
+         <div class="card bg-dark rounded-3">
+            <div class="card-body px-4 py-4">
+               <h3 class="text-center">Password generator</h3>
+               <!-- * password result -->
+               <div class="input-group input-group-lg my-4">
+                  <input type="text" class="form-control bg-dark border-3 text-light border-primary" id="pass-result" readonly placeholder="Result...">
+                  <button class="btn btn-primary input-group-text" id="copy-button">
+                     <i class="fa fa-clipboard"></i>
+                  </button>
+               </div>
+               <!-- ! end password result -->
+
+               <div class="row my-2">
+                  <!-- * password length -->
+                  <div class="mb-2 d-flex justify-content-between">
+                     <label for="pass-length" class="form-label">Password length</label>
+                     <div class="col-3">
+                        <input type="number" class="form-control form-control-sm bg-dark text-light" id="pass-length" min="4" max="20" placeholder="4-20" value="7">
+                     </div>
+                  </div>
+                  <!-- ! end password length -->
+
+                  <!-- * uppercase including -->
+                  <div class="mb-2 d-flex justify-content-between">
+                     <label for="include-uppercase" class="form-label">Include uppercase</label>
+                     <div class="form-check">
+                        <input type="checkbox" class="form-check-input bg-dark border-2 border-light" id="include-uppercase" checked>
+                     </div>
+                  </div>
+                  <!-- ! end uppercase including -->
+
+                  <!-- * lowercase including -->
+                  <div class="mb-2 d-flex justify-content-between">
+                     <label for="include-lowercase" class="form-label">Include lowercase</label>
+                     <div class="form-check">
+                        <input type="checkbox" class="form-check-input bg-dark border-2 border-light" id="include-lowercase">
+                     </div>
+                  </div>
+                  <!-- ! end lowercase including -->
+
+                  <!-- * number including -->
+                  <div class="mb-2 d-flex justify-content-between">
+                     <label for="include-number" class="form-label">Include number</label>
+                     <div class="form-check">
+                        <input type="checkbox" class="form-check-input bg-dark border-2 border-light" id="include-number">
+                     </div>
+                  </div>
+                  <!-- ! end number including -->
+
+                  <!-- * symbols including -->
+                  <div class="mb-2 d-flex justify-content-between">
+                     <label for="include-symbol" class="form-label">Include symbol</label>
+                     <div class="form-check">
+                        <input type="checkbox" class="form-check-input bg-dark border-2 border-light" id="include-symbol">
+                     </div>
+                  </div>
+                  <!-- ! end symbols including -->
+               </div>
+
+               <button class="col-12 btn btn-primary mt-1" id="generate-btn">
+                  Generate password
+                  <i class="bi bi-arrow-right-circle"></i>
+               </button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+   <script src="/js/min.js"></script>
+</body>
+</html>
